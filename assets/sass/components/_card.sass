@@ -1,0 +1,100 @@
+.card
+    width: 100%
+    background: $white
+    margin: 10px auto
+    & .card-avatar
+        top: -50px
+        position: relative
+        width: 100px
+        height: 100px
+        & img
+            +radius(50%)
+   
+    & .card-head
+        width: 100%
+        background: #fafafa
+        
+        & .avatar-name
+            font-size: 1.2rem
+            color: $dark
+            margin-bottom: 10px
+            font-weight: 600
+        
+        & i.big
+            width: 100px
+            height: 100px
+            font-size: 60px
+            +flex(row,center,center)
+
+        
+        & .row
+            width: 98%
+            margin: auto
+            +flex(row,flex-start,flex-start)
+            & img 
+                width: 100px
+                height: 100px
+                margin: 10px
+            & span ,& p
+                height: 100%
+           
+           
+        & .column
+            width: calc(100% - 150px);
+            min-height: 120px
+            margin-left: 10px
+            +flex(column,flex-start,center)
+            
+                 
+    & .block
+        width: 100%
+        margin: auto
+        padding: 2rem 1rem
+        & p
+            color: lighten($dark-grey,20%)
+            min-height: 40px
+            height: auto
+            line-height: 1.5
+            text-align: justify        
+    & .card-body
+        +flex(column,center,flex-start)
+        padding: 2rem 1rem
+        & span
+                color: lighten($dark-grey,20%)
+                min-height: 40px
+                height: auto
+                line-height: 1.5
+        & .row
+            width: 100%
+            height: auto
+            min-height: 40px
+            padding: 0
+            margin: 5px auto
+            +flex(row,center,space-between)
+            & span ,& p
+                height: 100%
+            & span
+                +flex(row,center,flex-start)
+                color: lighten($dark-grey,20%)
+            & p
+                +flex(row,center,flex-end)
+                font-weight: 500
+                font-size: 1.1rem
+                color: $dark-grey
+                min-height: 40px
+                
+                
+.verticle-link
+    +flex(column,center,space-around)
+    margin: 10px
+    height: 8rem
+
+    & a
+        font-size: 1rem
+
+    & > i
+        font-size: 5rem
+
+
+  
+

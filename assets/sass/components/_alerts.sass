@@ -1,0 +1,68 @@
+.alert
+    width: 100%
+    position: relative
+    margin-bottom: 25px
+    padding: 1rem
+    &.success-alert
+        background: $success-light
+        border: 1px solid $success-light-border
+        color: $success
+        padding: 10px
+        +flex(column,flex-start,center)
+        +radius(4px)
+        & a
+            color: darken($success,10%)
+            font-weight: bold
+            &:hover,&:focus,&:active
+                color: $success
+
+    &.danger-alert
+        background: $danger-light
+        border: 1px solid $danger-light-border
+        color: $danger
+        padding: 10px
+        +flex(column,flex-start,center)
+        +radius(4px)
+        & a
+            color: darken($danger,10%)
+            font-weight: bold
+            &:hover,&:focus,&:active
+                color: $danger
+    &.info-alert
+        background: $info-light
+        border: 1px solid $info-light-border
+        color: $info
+        padding: 10px
+        +flex(column,flex-start,center)
+        +radius(4px)
+        & a
+            color: darken($info,10%)
+            font-weight: bold
+            &:hover,&:focus,&:active
+                color: $info
+    > #dismiss-alert
+        top: 1rem
+        right: 5px
+        position: absolute
+        width: 40px
+        max-width: 40px
+        height: 40px
+        background: transparent
+        +flex(row,flex-start,center)
+        margin: auto
+        padding: 0 0
+        
+        & i
+            font-size: 20px
+            color: $dark-grey
+        &:hover
+            background: rgba(0,0,0,0.1)
+            +radius(50%)
+
+    & p.alert-message
+        width: calc(100% - 40px)
+        height: 100%
+        +flex(row,center,flex-start)
+        min-height: 20px
+        text-align: justify
+           

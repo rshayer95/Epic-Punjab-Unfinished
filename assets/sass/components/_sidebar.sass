@@ -1,0 +1,32 @@
+.sidebar
+        top: 11vh
+        left: -230px
+        width: 220px
+        background: $white
+        position: fixed
+        height: auto
+        max-height: 89%
+        display: block
+        transition: all 0.4s
+        overflow-y: auto
+        &.open
+            left: 0
+        & a
+            width: 100%
+            &:hover
+                background: #fafafa
+                border-left: 3px solid darken($primary,10%)
+        & button, & form
+            width: 100%
+        & a , & span
+            +flex(row,center,flex-start)
+            padding: 5px 7px
+            border: 3px solid transparent
+        & a > i , & span > i 
+            width: 30px
+            font-size: 20px
+            +flex(row,center,center) 
+        & span
+            font-weight: 500
+            color: darken($primary,10%)
+            

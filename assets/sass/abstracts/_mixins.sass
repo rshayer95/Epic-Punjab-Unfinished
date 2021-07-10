@@ -1,0 +1,76 @@
+=flex($direction,$align,$justify)
+    display: -webkit-box
+    display: -moz-box
+    display: -webkit-flex
+    display: -ms-flexbox
+    display: flex
+    //Direction
+    @if $direction == row-reverse 
+        -webkit-box-direction: reverse
+        -webkit-box-orient: horizontal
+        -moz-box-direction: reverse
+        -moz-box-orient: horizontal
+    @else if $direction == column 
+        -webkit-box-direction: normal
+        -webkit-box-orient: vertical
+        -moz-box-direction: normal
+        -moz-box-orient: vertical
+    @else if $direction == column-reverse 
+        -webkit-box-direction: reverse
+        -webkit-box-orient: vertical
+        -moz-box-direction: reverse
+        -moz-box-orient: vertical
+    @else 
+        -webkit-box-direction: normal
+        -webkit-box-orient: horizontal
+        -moz-box-direction: normal
+        -moz-box-orient: horizontal
+    -webkit-flex-direction: $direction
+    -ms-flex-direction: $direction
+    flex-direction: $direction
+
+    //Align
+    @if $align == flex-start 
+        -webkit-box-align: start
+        -moz-box-align: start
+        -ms-flex-align: start
+    @else if $align == flex-end 
+        -webkit-box-align: end
+        -moz-box-align: end
+        -ms-flex-align: end
+    @else 
+        -webkit-box-align: $align
+        -moz-box-align: $align
+        -ms-flex-align: $align
+  
+    -webkit-align-items: $align
+    align-items: $align
+    //Justify
+    @if $justify == flex-start 
+        -webkit-box-pack: start
+        -moz-box-pack: start
+        -ms-flex-pack: start
+    @else if $justify == flex-end 
+        -webkit-box-pack: end
+        -moz-box-pack: end
+        -ms-flex-pack: end
+    @else if $justify == space-between 
+        -webkit-box-pack: justify
+        -moz-box-pack: justify
+        -ms-flex-pack: justify
+    @else if $justify == space-around 
+        -ms-flex-pack: distribute
+    @else 
+        -webkit-box-pack: $justify
+        -moz-box-pack: $justify
+        -ms-flex-pack: $justify
+
+    -webkit-justify-content: $justify
+    justify-content: $justify
+    
+
+=radius($radius)
+    -webkit-border-radius: $radius
+    -moz-border-radius: $radius
+    -ms-border-radius: $radius
+    border-radius: $radius
